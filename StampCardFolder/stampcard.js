@@ -37,11 +37,26 @@ const minLeft = 0;
 const stepTop = [];
 const stepLeft = [];
 
+let shiftTop = true;
+let shiftLeft = false;
+
 badges.forEach(element => {
-    stepTop.push(1);
+    if (shiftTop == true){
+        stepTop.push(1);
+        shiftTop = false;
+    } else {
+        stepTop.push(-1)
+        shiftTop = true;
+    }
 });
 badges.forEach(element => {
-    stepLeft.push(1);
+    if (shiftLeft == true){
+        stepLeft.push(1);
+        shiftLeft = false;
+    } else {
+        stepLeft.push(-1)
+        shiftLeft = true;
+    }
 });
 
 function move(){
