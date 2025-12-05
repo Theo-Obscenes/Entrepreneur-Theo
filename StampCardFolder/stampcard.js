@@ -37,27 +37,23 @@ const minLeft = 0;
 const stepTop = [];
 const stepLeft = [];
 
-let shiftTop = true;
-let shiftLeft = false;
-
-badges.forEach(element => {
-    if (shiftTop == true){
+for (i = 0; i != badge.length; i++){
+    // top bounce
+    if (i < 10) {
         stepTop.push(1);
-        shiftTop = false;
     } else {
-        stepTop.push(-1)
-        shiftTop = true;
+        stepTop.push(-1);
     }
-});
-badges.forEach(element => {
-    if (shiftLeft == true){
+
+    // left bounce
+    if (i < 10) {
         stepLeft.push(1);
-        shiftLeft = false;
+    } else if (i >= 20) {
+        stepLeft.push(1);
     } else {
-        stepLeft.push(-1)
-        shiftLeft = true;
+        stepLeft.push(-1);
     }
-});
+}
 
 function move(){
     // new code
@@ -115,3 +111,4 @@ function move(){
 }
 
 setInterval(move, 20);   
+
