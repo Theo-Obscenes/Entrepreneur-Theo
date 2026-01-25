@@ -41,6 +41,10 @@ for (i = 0; i != badge.length; i++){
     // top bounce
     if (i < 10) {
         stepTop.push(1);
+    } else if (i >=48){
+        stepTop.push(-1);
+    } else if (i >=46){
+        stepTop.push(1);
     } else if (i >=43){
         stepTop.push(-1);
     } else if (i >=31){
@@ -52,6 +56,8 @@ for (i = 0; i != badge.length; i++){
     // left bounce
     if (i < 10) {
         stepLeft.push(1);
+    } else if (i >= 46) {
+        stepLeft.push(-1);
     } else if (i >= 43) {
         stepLeft.push(1);
     } else if (i >= 31) {
@@ -119,6 +125,7 @@ function move(){
 }
 
 setInterval(move, 20);   
+
 
 
 
