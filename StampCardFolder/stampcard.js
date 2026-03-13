@@ -41,32 +41,12 @@ for (i = 0; i != badge.length; i++){
     // top bounce
     if (i < 10) {
         stepTop.push(1);
-    } else if (i >=50){
-        stepTop.push(1);
-    } else if (i >=48){
-        stepTop.push(-1);
-    } else if (i >=46){
-        stepTop.push(1);
-    } else if (i >=43){
-        stepTop.push(-1);
-    } else if (i >=31){
-        stepTop.push(1);
     } else {
         stepTop.push(-1);
     }
 
     // left bounce
     if (i < 10) {
-        stepLeft.push(1);
-    } else if (i >= 50) {
-        stepLeft.push(1);
-    } else if (i >= 46) {
-        stepLeft.push(-1);
-    } else if (i >= 43) {
-        stepLeft.push(1);
-    } else if (i >= 31) {
-        stepLeft.push(-1);
-    } else if (i >= 20) {
         stepLeft.push(1);
     } else {
         stepLeft.push(-1);
@@ -129,6 +109,7 @@ function move(){
 }
 
 setInterval(move, 20);   
+
 
 
 
